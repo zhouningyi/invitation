@@ -102,9 +102,11 @@
     .addOutSpeed {
         -webkit-animation: animationOut1 0.6s linear forwards;
     }
-    #text {
+    #text{
         text-align: center;
-        font-size: 200pt;
+        font-weight: bold;
+        color:#099;
+        font-size: 250pt;
     }
     .people {
         background-origin: 0pt 0pt;
@@ -196,8 +198,8 @@
       vertical-align: middle;
       font-size: 30pt;
       height: 10%;
-      left: 10%;
-      width: 80%;
+      left: 5%;
+      width: 90%;
       color: #fff;
       border-radius: 4pt;
       cursor: pointer;
@@ -235,13 +237,14 @@
     }
     .telSmall{ 
         position: relative;
-        top:35pt;
+        top:2pt;
     }    
     .mapSmall{
         position: relative;
-        top:35pt;
+        top:2pt;
     }
     .panoSmall{ 
+        background:rgba(200,50,150,0.7);
         position: relative;
-        top:35pt;
+        top:2pt;
     }

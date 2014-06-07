@@ -3,6 +3,7 @@
 
 
     var mapText = '上海交大闵行校区（东川路）'
+    var panoText = '留园餐厅2楼'
     function Warper (div){
       this.div = div;
 
@@ -60,6 +61,7 @@
 
     Information.prototype.clearMap = function(){
       $('#map').find('.div').remove();
+      $('#pano').find('.div').remove();
     }
 
     Information.prototype.pano = function(){
@@ -75,13 +77,19 @@
     });
     };
 
+    Information.prototype.shrink = function(){
+      this.clearMap();
+      $('#map').removeClass('big').removeClass('fullScreen').css('zIndex',1).addClass('mapSmall').text(mapText);
+      $('#pano').removeClass('big').removeClass('fullScreen').css('zIndex',1).addClass('panoSmall').text(panoText).css('background','rgba(200,50,150,0.7)');
+    }
+
     Information.prototype.click = function(){
       var self = this;
 
       $('#map').click(function(){
+        self.shrink();
         if(self.mapTpye){
-          $('#map').removeClass('mapSmall').addClass('fullScreen').css('zIndex',100000).text('');
-          console.log(self)
+          $('#map').removeClass('mapSmall').addClass('big').css('zIndex',100000).text('');
           self.maps();
         }else{
           self.clearMap();
@@ -91,11 +99,12 @@
       });
 
       $('#pano').click(function(){
+        self.shrink();
         if(self.panoTpye){
-          $('#pano').removeClass('panoSmall').addClass('big');
+          $('#pano').removeClass('panoSmall').addClass('big').css('zIndex',100000).text('');
           self.pano();
         }else{
-          $('#pano').removeClass('big').addClass('panoSmall'); 
+          $('#pano').removeClass('big').addClass('panoSmall');
         }
         self.panoTpye = !self.panoTpye;
         });

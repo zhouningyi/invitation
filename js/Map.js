@@ -13,7 +13,7 @@
         center: new qq.maps.LatLng(31.0259,121.4326),
         zoom:15
     }) 
-  }
+  };
 
   Map.prototype.searches = function(){
     var input = this.searches = 
@@ -63,8 +63,8 @@
     var labelRoads = new qq.maps.Label({
         position: ptRoads,
         map: this.mapObj,
-        style:{'background':'#900','width':'300px','height':'40px','line-height':'40px','font-size':'30px','border-radius':'0px 15px 15px 30px'},
-        content:'A4高速剑川路出口'
+        style:{'background':'#099','width':'300px','height':'40px','line-height':'40px','font-size':'30px','border-radius':'0px 15px 15px 30px'},
+        content:'S4高速剑川路出口'
     });
     // var marker = new qq.maps.Marker({
     //             position: liuyanMaker,
