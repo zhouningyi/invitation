@@ -87,23 +87,26 @@
       var self = this;
 
       $('#map').click(function(){
-        self.shrink();
         if(self.mapTpye){
           $('#map').removeClass('mapSmall').addClass('big').css('zIndex',100000).text('');
+          $('#pano').text('收起↑');
+          self.panoTpye = false;
           self.maps();
         }else{
-          self.clearMap();
+          self.shrink();
           $('#map').removeClass('big').removeClass('fullScreen').css('zIndex',1).addClass('mapSmall').text(mapText)
         }
         self.mapTpye = !self.mapTpye;
       });
 
       $('#pano').click(function(){
-        self.shrink();
         if(self.panoTpye){
+          self.mapTpye = false;
           $('#pano').removeClass('panoSmall').addClass('big').css('zIndex',100000).text('');
+          $('#map').text('收起');
           self.pano();
         }else{
+          self.shrink();
           $('#pano').removeClass('big').addClass('panoSmall');
         }
         self.panoTpye = !self.panoTpye;

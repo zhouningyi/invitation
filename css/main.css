@@ -5,7 +5,7 @@
         height: 80%;
         text-decoration:none;
         color:rgba(255,255,255,0.8);
-        font-size: 30pt;
+        font-size: 40pt;
     }
     a:link {
         color: rgba(255,255,255,0.8);
@@ -80,7 +80,7 @@
         left: 30%;
         width: 40%;
         height: 8%;
-        background:rgba(0,150,200,0.2);
+        background:rgba(0,150,180,0.6);
         font-size: 40px;
         color: #fff;
         border-radius: 5px;
@@ -196,7 +196,7 @@
       position:relative;
       text-align: center;
       vertical-align: middle;
-      font-size: 30pt;
+      font-size: 40pt;
       height: 10%;
       left: 5%;
       width: 90%;
@@ -216,16 +216,33 @@
     }*/
 
     #tel{
-        background:rgba(255,180,0,0.7);
+        background:rgba(255,10,0,0.7);
     }
     #map {
-        background:rgba(50,150,180,0.7);
+        background:rgba(0,150,180,0.7);
     }
     #pano {
        background:rgba(200,50,150,0.7);
     } 
+    @-webkit-keyframes animationBig {
+        0% {
+            height: 10%;
+        }
+        100% {
+            height: 60%;
+        }
+    }
 
+    @-webkit-keyframes animationShink {
+        0% {
+            height: 60%;
+        }
+        100% {
+            height: 10%;
+        }
+    }
     .big{
+     -webkit-animation: animationBig 0.3s linear forwards;
       height: 60%;
     }
     .fullScreen{
@@ -240,6 +257,7 @@
         top:2pt;
     }    
     .mapSmall{
+        background:rgba(0,150,180,0.7);
         position: relative;
         top:2pt;
     }
